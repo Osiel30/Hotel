@@ -172,3 +172,137 @@ body {
   .manage-button:hover {
     background-color: #FFD700;
   }
+  /* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #333;
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #00aaf4;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #444;
+  }
+  
+  /* Estilos del menú desplegable en la columna de acciones */
+  .actions {
+    position: relative;
+  }
+  
+  .menu-icon {
+    width: 20px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .dropdown a {
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    background-color: #555;
+  }
+  
+  /* Mostrar el menú desplegable cuando el usuario haga hover en el icono */
+  .actions:hover .dropdown {
+    display: block;
+  }
+  /* Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1a1a1a; /* Fondo oscuro más intenso */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1100px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Luz suave azul */
+}
+
+/* Barra de búsqueda principal */
+.main-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    max-width: 100%;
+    background-color: #2c2c2c; /* Fondo oscuro de la barra */
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #00ffff; /* Borde azul neón */
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Efecto de neón */
+}
+
+/* Input de búsqueda */
+.main-search input[type="text"] {
+    flex-grow: 1;
+    background-color: #1a1a1a; /* Fondo del input en modo oscuro */
+    border: none;
+    outline: none;
+    color: #00ffff; /* Texto azul neón */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    caret-color: #00ffff; /* Cursor azul neón */
+}
+
+/* Placeholder del input de búsqueda */
+.main-search input[type="text"]::placeholder {
+    color: rgba(0, 255, 255, 0.7); /* Placeholder azul neón semi-transparente */
+}
+
+/* Botón de búsqueda */
+.main-search button {
+    background-color: #00ffff; /* Fondo azul neón */
+    border: none;
+    color: #1a1a1a; /* Texto oscuro para contraste */
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-search button:hover {
+    background-color: #00b3b3; /* Oscurecer el azul neón al hacer hover */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Intensificar el efecto neón al hacer hover */
+}
+
+/* Efecto de enfoque (focus) en el input de búsqueda */
+.main-search input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Efecto de neón cuando el input está en focus */
+    border: 1px solid #00ffff; /* Añadir borde de neón en focus */
+}
+
+.sidebar-title {
+  margin: 8px 0; /* Espacio vertical reducido entre títulos */
+  padding: 5px;  /* Opcional: puedes ajustar el padding según sea necesario */
+  line-height: 1.2; /* Opcional: ajusta el espacio entre líneas del texto */
+}
+
+.sidebar-title a {
+  text-decoration: none;  /* Quitar subrayado */
+  color: inherit;         /* Mantener el color original del texto */
+  display: block;         /* Para que el enlace abarque todo el espacio del elemento */
+}
+

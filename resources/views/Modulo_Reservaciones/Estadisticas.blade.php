@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="{{ asset('/css/Modulo_Reservaciones/Dashboard.css') }}">
+  <title>Estadisticas</title>
+  <link rel="stylesheet" href="{{ asset('/css/Modulo_Reservaciones/Estadisticas.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -51,20 +51,22 @@
   </div>
 
   <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
+   <!-- Sidebar -->
+   <div class="sidebar">
       <div class="sidebar-title">
+      <a href="/estadisticas" class="sidebar-title">
         <span>Estadisticas</span>
       </div>
 
       <div class="sidebar-title">
+      <a href="/mapeo" class="sidebar-title">
         <span>Mapeo de disponibilidad</span>
       </div>
 
       <div class="sidebar-title">
+      <a href="/reservaciones" class="sidebar-title">
         <span>Reservaciones</span>
       </div>
-      <!-- Aquí puedes añadir más elementos del menú lateral -->
     </div>
 
 
