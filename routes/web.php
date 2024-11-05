@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Modulo_Reservaciones.Dashboard');
 });
+
+Route::get('/ordStock', function () {
+    return view('Modulo_Reservaciones.ordenesStock');
+});
+
+Route::get('/stock', function () {
+    return view('Modulo_Reservaciones.stock');
+});
