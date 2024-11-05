@@ -33,13 +33,12 @@
       </div>
       
       <div class="menu-item">
-        <!-- <a href="{{ route('facturacion') }}">  -->
+        <a href="{{ route('facturacion')}}"> 
           <img src="img/Facturas.png" alt="Facturas">
           <span>Facturas</span>
-        <!-- </a> -->
+        </a>
       </div>
-
-
+      
       <div class="menu-item">
         <img src="img/Marketing.png" alt="Marketing">
         <span>Marketing</span>
@@ -64,9 +63,9 @@
       </div>
 
       <div class="sidebar-title">
-      <!-- <a href="{{ route('listar') }}">  -->
+      <a href="{{ route('listar') }}">
         <span>Listar facturas</span>
-      <!-- </a> -->
+      </a> 
       </div>
     </div>
 

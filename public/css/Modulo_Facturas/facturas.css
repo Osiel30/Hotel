@@ -76,6 +76,17 @@ section {
 }
 
 
+/* Eliminar subrayado de los enlaces */
+a {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+}
+
+a:hover {
+    text-decoration: underline; /* Agrega subrayado en hover (opcional) */
+}
+
+
 
 .container2 {
     max-width: 800px;

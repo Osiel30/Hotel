@@ -32,7 +32,7 @@
         <span>Personal</span>
       </div>
       <div class="menu-item">
-        <a href="#"> 
+        <a href="{{ route('facturacion')}}"> 
           <img src="img/Facturas.png" alt="Facturas">
           <span>Facturas</span>
         </a>
@@ -57,7 +57,9 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-title">
+      <a href="{{ route('facturacion') }}">
         <span>Hacer factura</span>
+      </a>
       </div>
 
       <div class="sidebar-title">
