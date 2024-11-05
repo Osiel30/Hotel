@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('Modulo_Reservaciones.Dashboard');
 });
 
-Route::get('/facturas', function () {
+Route::get('/facturacion', function () {
     return view('Modulo_Facturas.Dashboard');
-});
+})->name('facturacion');
+
+Route::get('/listar', function () {
+    return view('Modulo_Facturas.Listar');
+})->name('listar');
+

@@ -1,0 +1,148 @@
+/* Estilo para encabezados h2 */
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Estilos de los formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    padding: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: lightgray;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+
+/* Campo de total a pagar */
+input[readonly] {
+    background-color: rgb(64, 64, 64);
+}
+
+/* Botones de acción */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+button.confirm-button,
+button.pay-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.confirm-button {
+    background-color: green;
+}
+
+button.pay-button {
+    background-color: rgb(40, 40, 200);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Estilo para las secciones de formularios */
+section {
+    background-color: rgb(85, 85, 85); /* Color de fondo gris */
+    padding: 20px; /* Padding interno */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Margen inferior para separar los cuadros */
+}
+
+
+
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+#search-id {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: #555;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #666;
+}
+
+td a {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+td a:hover {
+    background-color: #0056b3;
+    text-decoration: none; 
+}
+
+td {
+    text-align: left; 
+}
