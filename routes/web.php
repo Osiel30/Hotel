@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Modulo_Reservaciones.Dashboard');
+});
+
+Route::get('/facturas', function () {
+    return view('Modulo_Facturas.Dashboard');
 });
