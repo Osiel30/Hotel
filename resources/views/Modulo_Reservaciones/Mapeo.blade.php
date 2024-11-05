@@ -55,17 +55,19 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-title">
+      <a href="/estadisticas" class="sidebar-title">
         <span>Estadisticas</span>
       </div>
 
       <div class="sidebar-title">
+      <a href="/mapeo" class="sidebar-title">
         <span>Mapeo de disponibilidad</span>
       </div>
 
       <div class="sidebar-title">
+      <a href="/reservaciones" class="sidebar-title">
         <span>Reservaciones</span>
       </div>
-      <!-- Aquí puedes añadir más elementos del menú lateral -->
     </div>
 
 

@@ -224,3 +224,15 @@ body {
 .occupied {
     background-color: #dc3545; /* Rojo para ocupada */
 }
+
+.sidebar-title {
+    margin: 8px 0; /* Espacio vertical reducido entre títulos */
+    padding: 5px;  /* Opcional: puedes ajustar el padding según sea necesario */
+    line-height: 1.2; /* Opcional: ajusta el espacio entre líneas del texto */
+  }
+  
+  .sidebar-title a {
+    text-decoration: none;  /* Quitar subrayado */
+    color: inherit;         /* Mantener el color original del texto */
+    display: block;         /* Para que el enlace abarque todo el espacio del elemento */
+  }

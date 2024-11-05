@@ -3,10 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+Route::get('/estadisticas', function () {
     return view('Modulo_Reservaciones.Estadisticas');
 });
 
 Route::get('/mapeo', function () {
     return view('Modulo_Reservaciones.Mapeo');
+});
+
+Route::get('/reservaciones', function () {
+    return view('Modulo_Reservaciones.Reservaciones');
 });
