@@ -1,0 +1,221 @@
+/* Reset general de márgenes, padding y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura altura mínima pero permite expandirse */
+    overflow-y: auto; /* Permite desplazamiento vertical */
+}
+
+
+/* Barra superior (Header) */
+.header {
+    width: 100%; /* Ancho completo */
+    height: 70px; /* Altura de la barra */
+    background: #242222; /* Color de fondo de la barra */
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo, menú y perfil */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 30px; /* Espaciado horizontal interno */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Se asegura de que esté sobre otros elementos */
+}
+
+/* Estilo de la sección del logo en la barra superior */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logo-image {
+    width: 36px; /* Ancho de la imagen del logo */
+    height: 36px; /* Altura de la imagen del logo */
+    border-radius: 50%; /* Hace la imagen circular */
+}
+
+/* Menú de navegación en la barra superior */
+.menu-items {
+    display: flex;
+    gap: 20px; /* Espacio entre cada ítem del menú */
+}
+
+/* Estilo de cada ítem individual del menú */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+}
+
+.menu-item img {
+    width: 24px; /* Ancho del icono del menú */
+    height: 24px; /* Altura del icono del menú */
+}
+
+.menu-item span {
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: 500; /* Grosor de la fuente */
+    color: white; /* Color del texto */
+}
+
+/* Iconos del perfil en la esquina superior derecha */
+.profile-icons {
+    display: flex;
+    gap: 15px; /* Espacio entre cada icono */
+}
+
+.profile-icons img {
+    width: 35px; /* Ancho de cada icono de perfil */
+    height: 35px; /* Altura de cada icono de perfil */
+}
+
+.content {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin-top: 90px;
+    padding-left: 15px; 
+    padding-right: 80px;
+    gap: 30px; /* espacio entre los 2 divs */
+}
+
+.sidebar {
+    height: 150px;
+    width: 250px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 20px; 
+    margin-bottom: 20px; 
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    height: 50%;
+    color: white;
+}
+
+.sidebar .sidebar-content:first-of-type {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.sidebar .sidebar-content:last-of-type {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+#omg {
+    background-color: rgb(50, 50, 50);
+    color:rgb(77, 96, 246);
+    font-size: 32px;
+}
+
+.sidebar .sidebar-content:hover {
+    background-color: rgb(50, 50, 50);
+    color: rgb(77, 96, 246);
+    font-size: 32px;
+}
+
+.main {
+    flex: auto;
+    background-color: rgb(32, 32, 32);
+    height: 800px;
+    border-radius: 10px;
+}
+
+.main .main-content {
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: left;
+    font-size: 28px;
+    height: 25%;
+    color: white;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid gray; 
+}
+
+.main .main-content:last-of-type {
+    border-bottom: none;
+}
+
+.main .main-content img{
+    height: 150px;
+    width: 150px;
+    margin-right: 30px;
+}
+
+/**/
+
+#info-art {
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#info-art p {
+    margin-bottom: 5px;
+}
+
+#info-art .buttons {
+    display: flex;
+    gap: 5px; /* Espacio entre botones */
+    margin-top: 10px; /* Espacio entre texto y botones */
+}
+
+#info-art .buttons button {
+    padding: 5px 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#info-art .buttons button:hover {
+    background-color: darkgray;
+}
+
+/**/
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.pagination a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: rgb(32, 32, 32);
+    border: 1px solid #444;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: darkgray;
+}
+
+.pagination a.active {
+    background-color: gray;
+    color: white;
+    border: 1px solid #666;
+}

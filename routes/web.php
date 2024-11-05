@@ -18,3 +18,11 @@ Route::get('/reservaciones', function () {
 Route::get('/facturas', function () {
     return view('Modulo_Facturas.Dashboard');
 });
+
+Route::get('/ordStock', function () {
+    return view('Modulo_Reservaciones.ordenesStock');
+});
+
+Route::get('/stock', function () {
+    return view('Modulo_Reservaciones.stock');
+});
