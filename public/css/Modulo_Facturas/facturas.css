@@ -1,0 +1,181 @@
+/* Reset general de márgenes, padding y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Barra superior (Header) */
+.header {
+    width: 100%;
+    height: 80px;
+    background: #242222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-item span {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.profile-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-icons img {
+    width: 35px;
+    height: 35px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 80px;
+}
+
+/* Barra lateral (Sidebar) */
+.sidebar {
+    width: 250px;
+    background: #202020;
+    position: fixed;
+    top: 80px;
+    padding-top: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.sidebar-title {
+    padding: 20px;
+    font-size: 18px;
+    color: #B0B0B0;
+    font-weight: 500;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    margin-left: 300px;
+    padding: 20px;
+    background: #000000;
+    border-radius: 8px;
+    color: white;
+    overflow-y: auto;
+}
+
+/* Formulario de facturación */
+section {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+section h2 {
+    color: #FFE605;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #B0B0B0;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #00aaf4;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Botones de acción */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.confirm-button,
+.pay-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: #FFE605;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirm-button:hover,
+.pay-button:hover {
+    background-color: #FFD700;
+}
+.sidebar-title {
+    margin: 8px 0; /* Espacio vertical reducido entre títulos */
+    padding: 5px;  /* Opcional: puedes ajustar el padding según sea necesario */
+    line-height: 1.2; /* Opcional: ajusta el espacio entre líneas del texto */
+  }
+  
+  .sidebar-title a {
+    text-decoration: none;  /* Quitar subrayado */
+    color: inherit;         /* Mantener el color original del texto */
+    display: block;         /* Para que el enlace abarque todo el espacio del elemento */
+  }
