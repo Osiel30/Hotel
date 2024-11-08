@@ -19,6 +19,8 @@ class Clientes extends Migration
         $table->string('email')->unique();
         $table->string('telefono')->nullable();
         $table->text('direccion')->nullable();
+        $table->string('password'); 
+        $table->string('apellidos')->nullable();  
         $table->timestamps();
     });
 }

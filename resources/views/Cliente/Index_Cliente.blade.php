@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th>Nombre</th>
+                <th>Apellidos</th> 
                 <th>Email</th>
                 <th>Teléfono</th>
                 <th>Dirección</th>
@@ -21,13 +22,14 @@
             @foreach($clientes as $cliente)
             <tr>
                 <td>{{ $cliente->nombre }}</td>
+                <td>{{ $cliente->apellidos }}</td> 
                 <td>{{ $cliente->email }}</td>
                 <td>{{ $cliente->telefono }}</td>
                 <td>{{ $cliente->direccion }}</td>
                 <td>
                     <div class="action-buttons">
                         <button class="action-menu-btn">
-                        <img src="{{ asset('img/Opciones.png') }}" alt="Opciones" class="opciones-image">
+                            <img src="{{ asset('img/Opciones.png') }}" alt="Opciones" class="opciones-image">
                         </button>
                         <div class="action-dropdown">
                             <a href="{{ route('clientes.edit', $cliente->id) }}" class="edit-button">Editar</a>

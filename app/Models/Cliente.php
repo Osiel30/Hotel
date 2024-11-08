@@ -8,7 +8,7 @@ class Cliente extends Model
 {
     use HasFactory;
     protected $table = 'mysql.clientes';
-    protected $fillable = ['nombre', 'email', 'telefono', 'direccion'];
+    protected $fillable = ['nombre','apellidos', 'email', 'telefono', 'direccion','password'];
     
     public function reservaciones()
     {
