@@ -1,0 +1,96 @@
+body {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+.main-content {
+    margin: 20px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.new-button {
+    background-color: #fff;
+    color: #00e5ff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 2px solid #00e5ff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #333;
+}
+
+.clients-table th, .clients-table td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+}
+
+.clients-table th {
+    background-color: #333;
+    color: #a0a0a0;
+}
+
+.clients-table tr:hover {
+    background-color: #292929;
+}
+
+.action-buttons {
+    position: relative;
+}
+
+.action-menu-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.action-menu-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.action-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action-buttons:hover .action-dropdown {
+    display: block;
+}
+
+.action-dropdown a, .action-dropdown button {
+    display: block;
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.edit-button {
+    background-color: #ff9800;
+}
+
+.delete-button {
+    background-color: #f44336;
+    border: none;
+    cursor: pointer;
+}
