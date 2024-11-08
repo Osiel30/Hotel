@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+use App\Http\Controllers\OcupacionController;
 use App\Http\Controllers\ClienteController;
 
 Route::group(['prefix' => 'clientes'], function () {
@@ -14,6 +14,9 @@ Route::group(['prefix' => 'clientes'], function () {
     Route::put('/{cliente}', [ClienteController::class, 'update'])->name('clientes.update');  // Actualizar el cliente en la base de datos
     Route::delete('/{cliente}', [ClienteController::class, 'destroy'])->name('clientes.destroy');  // Eliminar un cliente
 });
+
+Route::get('/ocupacion', [OcupacionController::class, 'index']);
+
 
 
 Route::get('/estadisticas', function () {

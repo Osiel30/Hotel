@@ -9,7 +9,7 @@ class Hotel extends Model
 {
     use HasFactory;
 
-    protected $table = 'hoteles'; 
+    protected $table = 'mysql.hoteles'; 
     protected $fillable = ['nombre', 'direccion', 'telefono', 'ciudad', 'estado']; 
 
     // Relación con habitaciones: un hotel tiene muchas habitaciones
