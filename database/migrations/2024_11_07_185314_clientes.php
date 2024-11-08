@@ -12,18 +12,17 @@ class Clientes extends Migration
      * @return void
      */
     public function up()
-    {
-        // Crear la tabla Clientes
-        Schema::create('clientes', function (Blueprint $table) {
-            $table->id();  // Crea una columna 'id' AUTO_INCREMENT
-            $table->string('nombre', 100);  // Columna 'nombre' con 100 caracteres
-            $table->string('direccion', 255)->nullable();  // Columna 'direccion' con 255 caracteres, nullable
-            $table->string('telefono', 20)->nullable();  // Columna 'telefono' con 20 caracteres, nullable
-            $table->string('email', 100)->unique();  // Columna 'email' con 100 caracteres y debe ser única
-            $table->timestamp('fecha_registro')->default(DB::raw('CURRENT_TIMESTAMP'));  // Columna 'fecha_registro' con valor por defecto CURRENT_TIMESTAMP
-            $table->timestamps();  // Crea las columnas 'created_at' y 'updated_at'
-        });
-    }
+{
+    Schema::create('clientes', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre');
+        $table->string('email')->unique();
+        $table->string('telefono')->nullable();
+        $table->text('direccion')->nullable();
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.
@@ -32,7 +31,6 @@ class Clientes extends Migration
      */
     public function down()
     {
-        // Eliminar la tabla 'clientes' si existe
         Schema::dropIfExists('clientes');
     }
 }
