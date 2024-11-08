@@ -43,7 +43,6 @@
             </div>
         </div>
         <div class="profile-icons">
-        <img src="{{ asset('img/Calendario.png') }}" alt="Calendar" class="calendar-image">
         <img src="{{ asset('img/Notificacion.png') }}" alt="Notificaciones" class="notificaciones-image">
         <img src="{{ asset('img/Usuario.png') }}" alt="User" class="user-image">
         </div>

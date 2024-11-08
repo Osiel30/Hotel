@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
+<head>
+    <link rel="stylesheet" href="{{ asset('/css/Cliente/Create_Cliente.css') }}">
+</head>
+
 @section('content')
     <div class="main-content">
+        <div class="content">
         <h2>Registro de Cliente</h2>
-
-    
         <form action="{{ route('clientes.store') }}" method="POST">
             @csrf
             <div class="input-group">
@@ -39,6 +42,7 @@
 
             <button type="submit" class="manage-button">Registrar</button>
         </form>
+        </div>
     </div>
 @endsection
 
