@@ -1,4 +1,4 @@
-/* Reset general de márgenes, padding y box-sizing */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,27 +11,27 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asegura altura mínima pero permite expandirse */
-  overflow-y: auto; /* Permite desplazamiento vertical */
+  min-height: 100vh; 
+  overflow-y: auto; 
 }
 
-/* Contenedor principal debajo de la barra superior */
+
 .container {
   display: flex;
   flex: 1;
-  margin-top: 80px; /* Espacio para la barra superior */
+  margin-top: 80px; 
 }
 
-/* Barra lateral (Sidebar) */
+
 .sidebar {
-  width: 250px; /* Ancho de la barra lateral */
-  height: calc(100vh - 80px); /* Altura ajustada para la barra superior */
-  background: #202020; /* Color de fondo */
-  position: fixed; /* Fija la barra lateral */
-  top: 90px; /* Posiciona debajo de la barra superior */
+  width: 250px; 
+  height: calc(100vh - 80px); 
+  background: #202020; 
+  position: fixed; 
+  top: 90px; 
   left: 0;
-  padding-top: 10px; /* Espaciado superior dentro de la barra lateral */
-  border-radius: 0 10px 10px 0; /* Bordes redondeados en el lado derecho */
+  padding-top: 10px;
+  border-radius: 0 10px 10px 0; 
 }
 
 .sidebar-menu {
@@ -57,7 +57,7 @@ body {
   background-color: #333;
 }
 
-/* Estilos para la sección superior de gráficos */
+
 .top-charts {
   display: flex;
   justify-content: space-between;
@@ -79,7 +79,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Estilos para la sección de gráficos circulares */
+
 .circular-charts {
   display: flex;
   justify-content: space-around;
@@ -96,7 +96,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Botón de "Gestionar Hotel" */
+
 .manage-button {
   margin-top: 10px;
   padding: 8px 16px;
@@ -115,16 +115,16 @@ body {
 }
 
 .sidebar-title {
-  padding: 20px; /* Espaciado interno */
-  font-size: 18px; /* Tamaño del texto */
-  color: #B0B0B0; /* Color del texto */
-  font-weight: 500; /* Grosor de la fuente */
+  padding: 20px; 
+  font-size: 18px; 
+  color: #B0B0B0; 
+  font-weight: 500; 
 }
 
 .sidebar-title a {
-  text-decoration: none;  /* Quitar subrayado */
-  color: inherit;         /* Mantener el color original del texto */
-  display: block;         /* Para que el enlace abarque todo el espacio del elemento */
+  text-decoration: none;  
+  color: inherit;         
+  display: block;        
 }
 
 .main-content {
@@ -134,6 +134,6 @@ body {
   background: #000000;
   border-radius: 8px;
   color: white;
-  overflow-y: auto; /* Permite desplazamiento vertical en caso necesario */
-  min-height: calc(100vh - 80px); /* Ajusta para ocupar el espacio */
+  overflow-y: auto; 
+  min-height: calc(100vh - 80px); 
 }

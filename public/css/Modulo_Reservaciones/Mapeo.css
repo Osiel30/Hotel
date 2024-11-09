@@ -1,4 +1,4 @@
-/* Reset general de márgenes, padding y box-sizing */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,134 +11,133 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura altura mínima pero permite expandirse */
-    overflow-y: auto; /* Permite desplazamiento vertical */
+    min-height: 100vh; 
+    overflow-y: auto; 
 }
 
-/* Barra superior (Header) */
+
 .header {
-    width: 100%; /* Ancho completo */
-    height: 80px; /* Altura de la barra */
-    background: #242222; /* Color de fondo de la barra */
+    width: 100%; 
+    height: 80px; 
+    background: #242222;
     display: flex;
-    justify-content: space-between; /* Espacio entre logo, menú y perfil */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 0 30px; /* Espaciado horizontal interno */
-    position: fixed; /* Fija la barra en la parte superior */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 30px; 
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 10; /* Se asegura de que esté sobre otros elementos */
+    z-index: 10; 
 }
 
-/* Estilo de la sección del logo en la barra superior */
+
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacio entre el logo y el texto */
+    gap: 10px; 
 }
 
 .logo-image {
-    width: 36px; /* Ancho de la imagen del logo */
-    height: 36px; /* Altura de la imagen del logo */
-    border-radius: 50%; /* Hace la imagen circular */
+    width: 36px;
+    height: 36px; 
+    border-radius: 50%; 
 }
 
-/* Menú de navegación en la barra superior */
 .menu-items {
     display: flex;
-    gap: 20px; /* Espacio entre cada ítem del menú */
+    gap: 20px; 
 }
 
-/* Estilo de cada ítem individual del menú */
+
 .menu-item {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre el icono y el texto */
+    gap: 8px; 
 }
 
 .menu-item img {
-    width: 24px; /* Ancho del icono del menú */
-    height: 24px; /* Altura del icono del menú */
+    width: 24px; 
+    height: 24px; 
 }
 
 .menu-item span {
-    font-size: 18px; /* Tamaño del texto */
-    font-weight: 500; /* Grosor de la fuente */
-    color: white; /* Color del texto */
+    font-size: 18px; 
+    font-weight: 500; 
+    color: white; 
 }
 
-/* Iconos del perfil en la esquina superior derecha */
+
 .profile-icons {
     display: flex;
-    gap: 15px; /* Espacio entre cada icono */
+    gap: 15px; 
 }
 
 .profile-icons img {
-    width: 35px; /* Ancho de cada icono de perfil */
-    height: 35px; /* Altura de cada icono de perfil */
+    width: 35px; 
+    height: 35px; 
 }
 
-/* Contenedor principal debajo de la barra superior */
+
 .container {
     display: flex;
     flex: 1;
-    margin-top: 80px; /* Espacio para la barra superior */
+    margin-top: 80px; 
 }
 
-/* Barra lateral (Sidebar) */
+
 .sidebar {
-    width: 250px; /* Ancho de la barra lateral */
-    height: calc(100vh - 80px); /* Altura ajustada para la barra superior */
-    background: #202020; /* Color de fondo */
-    position: fixed; /* Fija la barra lateral */
-    top: 90px; /* Posiciona debajo de la barra superior */
+    width: 250px; 
+    height: calc(100vh - 80px); 
+    background: #202020; 
+    position: fixed;
+    top: 90px; 
     left: 0;
-    padding-top: 10px; /* Espaciado superior dentro de la barra lateral */
-    border-radius: 0 10px 10px 0; /* Bordes redondeados en el lado derecho */
+    padding-top: 10px; 
+    border-radius: 0 10px 10px 0; 
 }
 
 .sidebar-title {
-    padding: 20px; /* Espaciado interno */
-    font-size: 18px; /* Tamaño del texto */
-    color: #B0B0B0; /* Color del texto */
-    font-weight: 500; /* Grosor de la fuente */
+    padding: 20px; 
+    font-size: 18px;
+    color: #B0B0B0; 
+    font-weight: 500; 
 }
 
-/* Contenido principal a la derecha de la barra lateral */
+
 .main-content {
     flex: 1;
-    margin-left: 250px; /* Ajustado al ancho de la barra lateral */
+    margin-left: 250px;
     padding: 18px;
     background: #000000;
     border-radius: 8px;
     color: white;
-    overflow-y: auto; /* Permite desplazamiento vertical en caso necesario */
+    overflow-y: auto; 
 }
 
-/* Barra de búsqueda principal */
+
 .search-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333; 
     padding: 20px;
     border-radius: 8px;
     max-width: 1100px;
     margin: auto;
 }
 
-/* Barra de búsqueda principal */
+
 .main-search {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 300px; /* Ajusta este valor al ancho deseado */
-    max-width: 100%; /* Asegura que no se expanda demasiado en pantallas pequeñas */
+    width: 300px; 
+    max-width: 100%; 
 }
 
 .filters {
     display: flex;
-    flex-wrap: wrap; /* Permite que los filtros bajen de línea si hay muchos */
+    flex-wrap: wrap; 
     gap: 15px;
 }
 
@@ -158,31 +157,31 @@ body {
     padding: 8px;
     border: 1px solid #00aaf4;
     border-radius: 4px;
-    background-color: #555; /* Fondo del input */
-    color: rgb(0, 119, 247); /* Texto blanco */
+    background-color: #555;
+    color: rgb(0, 119, 247);
 }
 
 .search-input::placeholder {
     color: #00a8f7;
 }
 
-/* Contenedor para los hoteles */
+
 .hotels-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los recuadros bajen de línea si es necesario */
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    justify-content: center; /* Centra los recuadros */
-    max-width: 1100px; /* Limita el ancho máximo para centrarlos */
-    margin: 0 auto; /* Centra el contenedor en la página */
+    justify-content: center;
+    max-width: 1100px; 
+    margin: 0 auto; 
 }
 
-/* Estilo individual de cada recuadro de hotel */
+
 .hotel {
     background-color: #333;
     border-radius: 8px;
     padding: 15px;
-    width: 300px; /* Ancho fijo para cada recuadro */
+    width: 300px; 
     color: white;
     text-align: left;
 }
@@ -203,36 +202,36 @@ body {
 }
 
 .room {
-    width: 60px; /* Ancho de cada habitación */
-    height: 60px; /* Altura de cada habitación */
-    display: flex; /* Flexbox para centrar el texto */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    border-radius: 5px; /* Esquinas redondeadas */
-    font-weight: bold; /* Grosor de la fuente */
+    width: 60px;
+    height: 60px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 5px; 
+    font-weight: bold; 
 }
 
-/* Colores de estado */
+
 .available {
-    background-color: #28a745; /* Verde para disponible */
+    background-color: #28a745; 
 }
 
 .maintenance {
-    background-color: #ff8800; /* Naranja para mantenimiento */
+    background-color: #ff8800; 
 }
 
 .occupied {
-    background-color: #dc3545; /* Rojo para ocupada */
+    background-color: #dc3545; 
 }
 
 .sidebar-title {
-    margin: 8px 0; /* Espacio vertical reducido entre títulos */
-    padding: 5px;  /* Opcional: puedes ajustar el padding según sea necesario */
-    line-height: 1.2; /* Opcional: ajusta el espacio entre líneas del texto */
+    margin: 8px 0; 
+    padding: 5px;  
+    line-height: 1.2; 
   }
   
   .sidebar-title a {
-    text-decoration: none;  /* Quitar subrayado */
-    color: inherit;         /* Mantener el color original del texto */
-    display: block;         /* Para que el enlace abarque todo el espacio del elemento */
+    text-decoration: none;  
+    color: inherit;        
+    display: block;       
   }
