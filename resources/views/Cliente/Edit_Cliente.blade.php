@@ -2,14 +2,13 @@
 
 @section('title', 'Editar Cliente')
  
-@section('content')
+@section('main.content')
 <main class="main-content">
     <h2>Editar Cliente</h2>
 
     <form action="{{ route('clientes.update', $cliente->id) }}" method="POST" class="edit-form">
         @csrf
         @method('PUT')
-
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" value="{{ $cliente->nombre }}" required>

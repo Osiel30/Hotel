@@ -1,16 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Estadísticas')
-
-@section('sidebar')
-<li class="sidebar-item"><a href="#">Estadisticas</a></li>
-    <li class="sidebar-item"><a href="#">Mapeo</a></li>
-    <li class="sidebar-item"><a href="#">Clientes</a></li>
-    <li class="sidebar-item"><a href="#">Ocupacion</a></li>
-    <li class="sidebar-item"><a href="#">Reportes</a></li>
+@section('head.content')
+    <title>Estadisticas</title>
+    <link rel="stylesheet" href="{{ asset('/css/Modulo_Reservaciones/Estadisticas.css') }}">
 @endsection
 
-@section('content')
+@section('sidebar.content')
+    <li class="sidebar-content"><a href="#">Estadisticas</a></li>
+    <li class="sidebar-content"><a href="#">Mapeo</a></li>
+    <li class="sidebar-content"><a href="#">Clientes</a></li>
+    <li class="sidebar-content"><a href="#">Ocupacion</a></li>
+    <li class="sidebar-content"><a href="#">Reportes</a></li>
+@endsection
+
+@section('main.content')
     <!-- Sección de Gráficas de Crecimiento y Disponibilidad -->
     <div class="top-charts">
         <div class="chart-container">
@@ -43,7 +46,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('body.content')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Gráfico de Línea: Ganancias Totales

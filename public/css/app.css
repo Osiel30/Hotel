@@ -63,7 +63,6 @@ body {
     color: white;
 }
 
-/* Iconos de perfil */
 .profile-icons {
     display: flex;
     gap: 15px;
@@ -74,53 +73,64 @@ body {
     height: 35px;
 }
 
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 90px;
+    padding-left: 15px; 
+    padding-right: 80px;
+    gap: 30px; /* espacio entre los 2 divs */
+}
+
+.content a {
+   text-decoration: none;
+}
 
 .sidebar {
+    text-decoration: none;  
+    height: 100%; /*El largo depende de los hijos*/
     width: 250px;
-    height: calc(100vh - 80px); 
-    background: #202020;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    padding-top: 10px;
-    border-radius: 0 10px 10px 0;
-    overflow-y: auto;
+    background-color: rgb(32, 32, 32);
+    border-radius: 20px; 
+    margin-bottom: 20px; 
 }
 
-.sidebar-menu {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar-item {
-    padding: 15px;
+.sidebar .sidebar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    height: auto;
     color: white;
-    font-size: 16px;
-    border-bottom: 1px solid #444;
 }
 
-.sidebar-item a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+.sidebar .sidebar-content:first-of-type {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.sidebar-item:hover {
-    background-color: #333;
-    cursor: pointer;
+.sidebar .sidebar-content:last-of-type {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
 }
 
 
-.main-content {
-    margin-left: 250px; 
-    padding: 18px;
-    background: #000;
-    border-radius: 8px;
+.sidebar .sidebar-content:hover {
+    background-color: rgb(50, 50, 50);
+    color: rgb(77, 96, 246);
+    font-size: 32px;
+}
+
+.main {
+    flex: auto; /*Hace que la caja cubra todo el with */
+    background-color: rgb(32, 32, 32);
+    height: 100%; /*El largo depende de los hijos*/
+    border-radius: 10px;
+}
+
+.main .main-content {
+    padding-left: 30px;
     color: white;
-    overflow-y: auto;
-    min-height: calc(100vh - 80px); 
-}
-
-.main-content > * {
-    margin-top: 20px;
 }

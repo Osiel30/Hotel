@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
-<main class="main-content">
+@section('main.content')
+<div class="main-content">
     <h2>Lista de Clientes</h2>
     <div class="top-bar">
         <a href="{{ route('clientes.create') }}" class="new-button">+ Crear Cliente</a>
@@ -46,13 +46,15 @@
             @endforeach
         </tbody>
     </table>
-</main>
+</div>
 @endsection
 
-@section('sidebar')
-<li class="sidebar-item"><a href="#">Estadísticas</a></li>
-<li class="sidebar-item"><a href="#">Mapeo</a></li>
-<li class="sidebar-item"><a href="#">Clientes</a></li>
-<li class="sidebar-item"><a href="#">Ocupación</a></li>
-<li class="sidebar-item"><a href="#">Reportes</a></li>
+@section('sidebar.content')
+<ul>
+<li class="sidebar-content"><a href="#">Estadísticas</a></li>
+<li class="sidebar-content"><a href="#">Mapeo</a></li>
+<li class="sidebar-content"><a href="#">Clientes</a></li>
+<li class="sidebar-content"><a href="#">Ocupación</a></li>
+<li class="sidebar-content"><a href="#">Reportes</a></li>
+</ul>
 @endsection

@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-<head>
+@section('head.content')
+    <title>Crear Cliente</title>
     <link rel="stylesheet" href="{{ asset('/css/Cliente/Create_Cliente.css') }}">
-</head>
+@endsection
 
-@section('content')
+@section('main.content')
     <div class="main-content">
-        <div class="content">
         <h2>Registro de Cliente</h2>
         <form action="{{ route('clientes.store') }}" method="POST">
             @csrf
@@ -42,15 +42,15 @@
 
             <button type="submit" class="manage-button">Registrar</button>
         </form>
-        </div>
     </div>
 @endsection
 
-
-@section('sidebar')
-    <li class="sidebar-item"><a href="#">Estadísticas</a></li>
-    <li class="sidebar-item"><a href="#">Mapeo</a></li>
-    <li class="sidebar-item"><a href="#">Clientes</a></li>
-    <li class="sidebar-item"><a href="#">Ocupación</a></li>
-    <li class="sidebar-item"><a href="#">Reportes</a></li>
+@section('sidebar.content')
+    <ul>
+    <li class="sidebar-content"><a href="#">Estadísticas</a></li>
+    <li class="sidebar-content"><a href="#">Mapeo</a></li>
+    <li class="sidebar-content"><a href="#">Clientes</a></li>
+    <li class="sidebar-content"><a href="#">Ocupación</a></li>
+    <li class="sidebar-content"><a href="#">Reportes</a></li>
+    </ul>
 @endsection

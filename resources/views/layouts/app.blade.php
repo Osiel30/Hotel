@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel HUPV</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @yield('head.content')
 </head>
 <body>
     <header class="header">
@@ -48,22 +48,17 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="content">
         <div class="sidebar">
-            <ul class="sidebar-menu">
-                <li class="sidebar-item"><a href="#">Estadisticas</a></li>
-                <li class="sidebar-item"><a href="#">Mapeo</a></li>
-                <li class="sidebar-item"><a href="#">Clientes</a></li>
-                <li class="sidebar-item"><a href="#">Ocupacion</a></li>
-                <li class="sidebar-item"><a href="#">Reportes</a></li>
-            </ul>
+            @yield('sidebar.content')
         </div>
 
-        <main class="main-content">
-            @yield('content') 
-        </main>
+        <div class="main">
+            @yield('main.content') 
+        </div>
     </div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    @yield('body.content')
+
 </body>
 </html>
