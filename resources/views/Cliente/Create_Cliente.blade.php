@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="main-content">
+    <div class="main-content"> 
         <h2>Registro de Cliente</h2>
 
-    
         <form action="{{ route('clientes.store') }}" method="POST">
             @csrf
             <div class="input-group">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Editar Cliente')
-
+ 
 @section('content')
 <main class="main-content">
     <h2>Editar Cliente</h2>

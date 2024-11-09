@@ -9,7 +9,7 @@
 
     <table class="clients-table">
         <thead>
-            <tr>
+            <tr> 
                 <th>Nombre</th>
                 <th>Apellidos</th> 
                 <th>Email</th>
@@ -32,7 +32,8 @@
                             <img src="{{ asset('img/Opciones.png') }}" alt="Opciones" class="opciones-image">
                         </button>
                         <div class="action-dropdown">
-                            <a href="{{ route('clientes.edit', $cliente->id) }}" class="edit-button">Editar</a>
+                        <a href="{{ route('clientes.edit', $cliente->id) }}" class="edit-button">Editar</a>
+
                             <form action="{{ route('clientes.destroy', $cliente->id) }}" method="POST" class="delete-form">
                                 @csrf
                                 @method('DELETE')

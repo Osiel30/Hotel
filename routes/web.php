@@ -4,15 +4,27 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OcupacionController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\InventarioController;
+
+Route::prefix('inventario')->name('inventario.')->group(function () {
+    Route::get('/', [InventarioController::class, 'index'])->name('index');//Muestra
+    Route::get('create', [InventarioController::class, 'create'])->name('create');//Muestra el formulario de creacion
+    Route::post('/', [InventarioController::class, 'store'])->name('store');//Almacena el producto
+    Route::get('{inventario}', [InventarioController::class, 'show'])->name('show');//Muestra el producto por id
+    Route::get('{inventario}/edit', [InventarioController::class, 'edit'])->name('edit');//Muestra el formulario con la informacion para editar
+    Route::put('{inventario}', [InventarioController::class, 'update'])->name('update');//Actualiza un registro de producto
+    Route::delete('{inventario}', [InventarioController::class, 'destroy'])->name('destroy');//Elimina un producto
+});
+
 
 Route::group(['prefix' => 'clientes'], function () {
-    Route::get('/', [ClienteController::class, 'index'])->name('clientes.index');   // Listar clientes
-    Route::get('/crear', [ClienteController::class, 'create'])->name('clientes.create');  // Mostrar formulario para crear un nuevo cliente
-    Route::post('/', [ClienteController::class, 'store'])->name('clientes.store');  // Guardar el cliente en la base de datos
-    Route::get('/{cliente}', [ClienteController::class, 'show'])->name('clientes.show');  // Mostrar un cliente específico
-    Route::get('/{cliente}/editar', [ClienteController::class, 'edit'])->name('clientes.edit');  // Mostrar formulario para editar un cliente
-    Route::put('/{cliente}', [ClienteController::class, 'update'])->name('clientes.update');  // Actualizar el cliente en la base de datos
-    Route::delete('/{cliente}', [ClienteController::class, 'destroy'])->name('clientes.destroy');  // Eliminar un cliente
+    Route::get('/', [ClienteController::class, 'index'])->name('clientes.index');  
+    Route::get('/crear', [ClienteController::class, 'create'])->name('clientes.create');  
+    Route::post('/', [ClienteController::class, 'store'])->name('clientes.store'); 
+    Route::get('/{cliente}', [ClienteController::class, 'show'])->name('clientes.show');  
+    Route::get('/{cliente}/editar', [ClienteController::class, 'edit'])->name('clientes.edit');  
+    Route::put('/{cliente}', [ClienteController::class, 'update'])->name('clientes.update');  
+    Route::delete('/{cliente}', [ClienteController::class, 'destroy'])->name('clientes.destroy');  
 });
 
 Route::get('/ocupacion', [OcupacionController::class, 'index']);
