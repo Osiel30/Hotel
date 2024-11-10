@@ -9,7 +9,7 @@ class Habitacion extends Model
 {
     use HasFactory;
 
-    protected $table = 'mysql.habitaciones';
+    protected $table = 'sistemahotel.habitaciones';
     protected $fillable = [
         'hotel_id',
         'tipo_habitacion_id',

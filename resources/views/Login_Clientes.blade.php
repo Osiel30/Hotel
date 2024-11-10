@@ -17,26 +17,20 @@
             
             <h2>Iniciar Sesión</h2>
 
-            <form action="cliente-login.html" method="POST">
-                <div class="input-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" name="direccion" required>
-                </div>
+            <form action="{{ route('login') }}" method="POST">
+    @csrf
+    <div class="input-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="input-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
 
-                <button type="submit" class="manage-button">Iniciar Sesión</button>
-            </form>
+    <button type="submit" class="manage-button">Iniciar Sesión</button>
+</form>
+
 
             <button class="manage-button" onclick="window.location.href='empleado-login.html'">¿Eres Empleado?</button>
         </div>
