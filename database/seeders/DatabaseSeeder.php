@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +13,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
+        $this->call([
+            HotelesSeeder::class,
+            RolesSeeder::class,
+            PersonalSeeder::class,
+            ClienteSeeder::class,
+            InventarioSeeder::class,
+            ProveedoresSeeder::class,
+        ]);
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
     }
 }

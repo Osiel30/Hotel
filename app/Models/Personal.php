@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,10 +9,22 @@ class Personal extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['hotel_id', 'nombre', 'telefono', 'direccion', 'cargo'];
+    protected $table = 'sistemahotel.personal';
+
+    protected $fillable = [
+        'nombre', 'puesto', 'turno', 'fecha_ingreso', 'tarea_asignada',
+        'hora_entrada', 'hora_salida', 'acceso', 'area_asignada', 'estado',
+        'email', 'telefono', 'id_hotel', 'id_rol'
+    ];
 
     public function hotel()
     {
-        return $this->belongsTo(Hotel::class);
+        return $this->belongsTo(Hoteles::class, 'id_hotel');
     }
+
+    public function rol()
+{
+    return $this->belongsTo(Rol::class, 'id_rol');
+}
+
 }
