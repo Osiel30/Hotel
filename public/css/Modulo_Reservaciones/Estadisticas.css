@@ -1,3 +1,6 @@
+.main-content{
+}
+
 .top-charts {
   display: flex;
   justify-content: space-between;
@@ -29,6 +32,7 @@
 
 .hotel-chart {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .hotel-chart h3 {
@@ -48,6 +52,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  transform: translateY(-20px);
 }
 
 .manage-button:hover {

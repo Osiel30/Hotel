@@ -6,7 +6,7 @@
 }
 
 body {
-    background: black;
+    background: #263346; 
     font-family: 'Montserrat', sans-serif;
     color: white;
     display: flex;
@@ -18,7 +18,7 @@ body {
 .header {
     width: 100%;
     height: 70px;
-    background: #242222;
+    background: #131F30;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,11 +50,20 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    background-color: #2e3b4e; 
 }
 
 .menu-item img {
     width: 24px;
     height: 24px;
+    transition: transform 0.3s ease;
 }
 
 .menu-item span {
@@ -91,9 +100,10 @@ body {
     text-decoration: none;  
     height: 100%; /*El largo depende de los hijos*/
     width: 250px;
-    background-color: rgb(32, 32, 32);
+    background-color: #131F30;
     border-radius: 20px; 
     margin-bottom: 20px; 
+    color: white;
 }
 
 .sidebar .sidebar-content {
@@ -102,7 +112,14 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 28px;
-    height: auto;
+    height: 60px;
+}
+
+.sidebar .sidebar-content a {
+    color: white;
+}
+
+.sidebar .sidebar-content a:visited {
     color: white;
 }
 
@@ -118,14 +135,13 @@ body {
 
 
 .sidebar .sidebar-content:hover {
-    background-color: rgb(50, 50, 50);
-    color: rgb(77, 96, 246);
-    font-size: 32px;
+    background-color:#2e3b4e;
+    font-size: 36px;
 }
 
 .main {
     flex: auto; /*Hace que la caja cubra todo el with */
-    background-color: rgb(32, 32, 32);
+    /*background-color: rgb(32, 32, 32);*/
     height: 100%; /*El largo depende de los hijos*/
     border-radius: 10px;
 }

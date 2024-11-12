@@ -5,6 +5,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OcupacionController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\InventarioController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ReservacionController;
+
+Route::middleware(['web'])->group(function () {
+    Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('login', [LoginController::class, 'login']);
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+});
+
+
+Route::prefix('reservaciones')->name('reservaciones.')->group(function () {
+    Route::get('/', [ReservacionController::class, 'index'])->name('index'); 
+    Route::get('create', [ReservacionController::class, 'create'])->name('create'); 
+    Route::post('/', [ReservacionController::class, 'store'])->name('store'); 
+    Route::get('{reservacion}', [ReservacionController::class, 'show'])->name('show'); 
+    Route::get('{reservacion}/edit', [ReservacionController::class, 'edit'])->name('edit'); 
+    Route::put('{reservacion}', [ReservacionController::class, 'update'])->name('update'); 
+    Route::delete('{reservacion}', [ReservacionController::class, 'destroy'])->name('destroy'); 
+});
+
 
 Route::prefix('inventario')->name('inventario.')->group(function () {
     Route::get('/', [InventarioController::class, 'index'])->name('index');//Muestra
@@ -39,10 +59,6 @@ Route::get('/mapeo', function () {
     return view('Modulo_Reservaciones.Mapeo');
 });
 
-Route::get('/reservaciones', function () {
-    return view('Modulo_Reservaciones.Reservaciones');
-});
-
 Route::get('/facturacion', function () {
     return view('Modulo_Facturas.Dashboard');
 })->name('facturacion');
@@ -57,4 +73,8 @@ Route::get('/ordStock', function () {
 
 Route::get('/stock', function () {
     return view('Modulo_Reservaciones.stock');
+});
+
+Route::get('/login', function () {
+    return view('Login');
 });

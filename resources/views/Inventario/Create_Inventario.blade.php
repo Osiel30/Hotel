@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
-@section('content')
+@section('head.content')
+    <title>Editar Cliente</title>
+    <link rel="stylesheet" href="{{ asset('/css/Modulo_Inventario/Create_Inventario.css') }}">
+@endsection
+ 
+
+@section('main.content')
     <div class="main-content"> 
         <h2>Registro de Producto</h2>
 
@@ -14,7 +20,7 @@
 
             <div class="input-group">
                 <label for="hotel_id">Hotel:</label>
-                <select id="hotel_id" name="hotel_id" required>
+                <select class="styled-select" id="hotel_id" name="hotel_id" required>
                     @foreach($hoteles as $hotel)
                         <option value="{{ $hotel->id }}">{{ $hotel->nombre }}</option>
                     @endforeach
@@ -23,7 +29,7 @@
 
             <div class="input-group">
                 <label for="proveedor_id">Proveedor:</label>
-                <select id="proveedor_id" name="proveedor_id" required>
+                <select class="styled-select" id="proveedor_id" name="proveedor_id" required>
                     @foreach($proveedores as $proveedor)
                         <option value="{{ $proveedor->id }}">{{ $proveedor->nombre }}</option>
                     @endforeach
@@ -37,18 +43,15 @@
 
             <div class="input-group">
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion"></textarea>
+                <input type="text" id="descripcion" name="descripcion" required>
             </div>
 
-            <button type="submit" class="manage-button">Registrar Producto</button>
+            <button type="submit" class="cancel-button">Registrar Producto</button>
         </form>
     </div>
 @endsection
 
-@section('sidebar')
-    <li class="sidebar-item"><a href="#">Estadísticas</a></li>
-    <li class="sidebar-item"><a href="#">Mapeo</a></li>
-    <li class="sidebar-item"><a href="#">Clientes</a></li>
-    <li class="sidebar-item"><a href="#">Ocupación</a></li>
-    <li class="sidebar-item"><a href="#">Reportes</a></li>
+@section('sidebar.content')
+    <div class="sidebar-content">Stock</div>
+    <div class="sidebar-content">Ordenes</div>
 @endsection
