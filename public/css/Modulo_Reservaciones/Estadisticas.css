@@ -1,62 +1,5 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.main-content{
 }
-
-body {
-  background: black;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-  overflow-y: auto; 
-}
-
-
-.container {
-  display: flex;
-  flex: 1;
-  margin-top: 80px; 
-}
-
-
-.sidebar {
-  width: 250px; 
-  height: calc(100vh - 80px); 
-  background: #202020; 
-  position: fixed; 
-  top: 90px; 
-  left: 0;
-  padding-top: 10px;
-  border-radius: 0 10px 10px 0; 
-}
-
-.sidebar-menu {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar-item {
-  padding: 10px 20px;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.sidebar-item a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-}
-
-.sidebar-item:hover {
-  background-color: #333;
-}
-
 
 .top-charts {
   display: flex;
@@ -89,6 +32,7 @@ body {
 
 .hotel-chart {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .hotel-chart h3 {
@@ -108,32 +52,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  transform: translateY(-20px);
 }
 
 .manage-button:hover {
   background-color: #FFD700;
-}
-
-.sidebar-title {
-  padding: 20px; 
-  font-size: 18px; 
-  color: #B0B0B0; 
-  font-weight: 500; 
-}
-
-.sidebar-title a {
-  text-decoration: none;  
-  color: inherit;         
-  display: block;        
-}
-
-.main-content {
-  flex: 1;
-  margin-left: 300px;
-  padding: 18px;
-  background: #000000;
-  border-radius: 8px;
-  color: white;
-  overflow-y: auto; 
-  min-height: calc(100vh - 80px); 
 }

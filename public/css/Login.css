@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3f3fba, #a32b90);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #a32b90;
+}
+
+p {
+    margin-top: 5px;
+    color: #555;
+}
+
+form {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #a32b90;
+    font-size: 20px;
+}
+
+.input-group {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #a32b90;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #3f3fba;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #333;
+}
+.signup-text a {
+    color: #a32b90;
+    text-decoration: none;
+}
+
+.menu img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Centra en el contenedor */
+    padding-top: 10px; /* Ajusta el espaciado superior si es necesario */
+}

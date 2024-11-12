@@ -59,7 +59,6 @@ Route::get('/mapeo', function () {
     return view('Modulo_Reservaciones.Mapeo');
 });
 
-
 Route::get('/facturacion', function () {
     return view('Modulo_Facturas.Dashboard');
 })->name('facturacion');
@@ -74,4 +73,8 @@ Route::get('/ordStock', function () {
 
 Route::get('/stock', function () {
     return view('Modulo_Reservaciones.stock');
+});
+
+Route::get('/login', function () {
+    return view('Login');
 });

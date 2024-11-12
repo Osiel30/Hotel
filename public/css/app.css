@@ -6,7 +6,7 @@
 }
 
 body {
-    background: black;
+    background: #263346; 
     font-family: 'Montserrat', sans-serif;
     color: white;
     display: flex;
@@ -17,8 +17,8 @@ body {
 
 .header {
     width: 100%;
-    height: 80px;
-    background: #242222;
+    height: 70px;
+    background: #131F30;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,11 +50,20 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    background-color: #2e3b4e; 
 }
 
 .menu-item img {
     width: 24px;
     height: 24px;
+    transition: transform 0.3s ease;
 }
 
 .menu-item span {
@@ -63,7 +72,6 @@ body {
     color: white;
 }
 
-/* Iconos de perfil */
 .profile-icons {
     display: flex;
     gap: 15px;
@@ -74,53 +82,71 @@ body {
     height: 35px;
 }
 
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 90px;
+    padding-left: 15px; 
+    padding-right: 80px;
+    gap: 30px; /* espacio entre los 2 divs */
+}
+
+.content a {
+   text-decoration: none;
+}
 
 .sidebar {
+    text-decoration: none;  
+    height: 100%; /*El largo depende de los hijos*/
     width: 250px;
-    height: calc(100vh - 80px); 
-    background: #202020;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    padding-top: 10px;
-    border-radius: 0 10px 10px 0;
-    overflow-y: auto;
-}
-
-.sidebar-menu {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar-item {
-    padding: 15px;
+    background-color: #131F30;
+    border-radius: 20px; 
+    margin-bottom: 20px; 
     color: white;
-    font-size: 16px;
-    border-bottom: 1px solid #444;
 }
 
-.sidebar-item a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+.sidebar .sidebar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    height: 60px;
 }
 
-.sidebar-item:hover {
-    background-color: #333;
-    cursor: pointer;
-}
-
-
-.main-content {
-    margin-left: 250px; 
-    padding: 18px;
-    background: #000;
-    border-radius: 8px;
+.sidebar .sidebar-content a {
     color: white;
-    overflow-y: auto;
-    min-height: calc(100vh - 80px); 
 }
 
-.main-content > * {
-    margin-top: 20px;
+.sidebar .sidebar-content a:visited {
+    color: white;
+}
+
+.sidebar .sidebar-content:first-of-type {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.sidebar .sidebar-content:last-of-type {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+
+.sidebar .sidebar-content:hover {
+    background-color:#2e3b4e;
+    font-size: 36px;
+}
+
+.main {
+    flex: auto; /*Hace que la caja cubra todo el with */
+    /*background-color: rgb(32, 32, 32);*/
+    height: 100%; /*El largo depende de los hijos*/
+    border-radius: 10px;
+}
+
+.main .main-content {
+    padding-left: 30px;
+    color: white;
 }

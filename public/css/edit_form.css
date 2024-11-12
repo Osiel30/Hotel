@@ -23,7 +23,7 @@
 }
 
 .input-group input {
-    width: 95%;
+    width: 98%;
     padding: 8px; 
     border: 2px solid slateblue;
     border-radius: 5px;
@@ -39,8 +39,15 @@
     box-shadow: 0 0 8px rgba(39, 1, 143, 0.4);
 }
 
-.manage-button {
-    width: 30%;
+.button-group {
+    display: flex;
+}
+
+.cancel-button {
+    display: flex;             /* Enables flex layout */
+    align-items: center;       /* Centers text vertically */
+    justify-content: center;   /* Centers text horizontally */
+    width: 10%;
     padding: 12px;
     font-size: 20px; 
     font-weight: bold;
@@ -50,12 +57,10 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-
-.manage-button:hover {
+.cancel-button:hover {
     background-color: rgb(98, 0, 255);
     box-shadow: 0 0 8px rgba(39, 1, 143, 0.4);
     transform: translateY(-2px);
