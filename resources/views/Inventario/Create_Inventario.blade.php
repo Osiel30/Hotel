@@ -5,7 +5,7 @@
         <h2>Registro de Producto</h2>
 
         <form action="{{ route('inventario.store') }}" method="POST">
-            @csrf
+            @csrf 
 
             <div class="input-group">
                 <label for="nombre_producto">Producto:</label>
