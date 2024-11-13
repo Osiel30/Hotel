@@ -9,38 +9,60 @@ use Illuminate\Http\Request;
 
 class PersonalController extends Controller
 {
-    // Método para mostrar todos los registros en la vista index
     public function index()
     {
-        $personal = Personal::with(['hotel', 'rol'])->get(); // Obtener todos los registros con relaciones
+        $personal = Personal::with(['hotel', 'rol'])->get(); 
         return view('Personal.Index_Personal', compact('personal'));
     }
 
-    // Método para mostrar el formulario de creación
     public function create()
     {
-        $hoteles = Hoteles::all(); // Obtener todos los hoteles para el menú desplegable
-        $roles = Rol::all();       // Obtener todos los roles para el menú desplegable
+        $hoteles = Hoteles::all();
+        $roles = Rol::all();
         return view('Personal.Create_Personal', compact('hoteles', 'roles'));
     }
 
-    // Método para almacenar un nuevo registro en la base de datos
     public function store(Request $request)
-    {
-        $request->validate([
-            'nombre' => 'required|string|max:100',
-            'email' => 'required|email|max:100',
-            'telefono' => 'required|string|max:15',
-            'id_hotel' => 'required|exists:hoteles,id',
-            'id_rol' => 'required|exists:roles,id_rol',
-            // otros campos y sus reglas de validación
-        ]);
+{
+    $validated = $request->validate([
+        'nombre' => 'required|string|max:255',
+        'puesto' => 'required|string|max:255',
+        'turno' => 'required|string|max:255',
+        'fecha_ingreso' => 'required|date',
+        'tarea_asignada' => 'required|string|max:255',
+        'hora_entrada' => 'required|string|max:5',
+        'hora_salida' => 'required|string|max:5',
+        'acceso' => 'required|string|max:255',
+        'area_asignada' => 'required|string|max:255',
+        'estado' => 'required|string|max:255',
+        'email' => 'required|email|unique:personal,email',
+        'telefono' => 'required|string|max:15',
+        'id_hotel' => 'required|exists:hoteles,id', 
+        'id_rol' => 'required|in:1,2,3', 
+    ]);
 
-        Personal::create($request->all());
-        return redirect()->route('personal.index')->with('success', 'Personal creado exitosamente');
-    }
+    
+    $personal = new Personal();
+    $personal->nombre = $validated['nombre'];
+    $personal->puesto = $validated['puesto'];
+    $personal->turno = $validated['turno'];
+    $personal->fecha_ingreso = $validated['fecha_ingreso'];
+    $personal->tarea_asignada = $validated['tarea_asignada'];
+    $personal->hora_entrada = $validated['hora_entrada'];
+    $personal->hora_salida = $validated['hora_salida'];
+    $personal->acceso = $validated['acceso'];
+    $personal->area_asignada = $validated['area_asignada'];
+    $personal->estado = $validated['estado'];
+    $personal->email = $validated['email'];
+    $personal->telefono = $validated['telefono'];
+    $personal->id_hotel = $validated['id_hotel']; 
+    $personal->id_rol = $validated['id_rol']; 
+    $personal->save();
 
-    // Método para mostrar el formulario de edición
+    return redirect()->route('personal.index');
+}
+
+
     public function edit($id)
     {
         $personal = Personal::with(['hotel', 'rol'])->findOrFail($id);
@@ -49,24 +71,45 @@ class PersonalController extends Controller
         return view('Personal.Edit_Personal', compact('personal', 'hoteles', 'roles'));
     }
 
-    // Método para actualizar un registro existente
     public function update(Request $request, $id)
     {
         $request->validate([
             'nombre' => 'required|string|max:100',
+            'puesto' => 'nullable|string|max:50',
+            'turno' => 'required|in:Mañana,Tarde,Noche',
+            'fecha_ingreso' => 'required|date',
+            'tarea_asignada' => 'nullable|string|max:255',
+            'hora_entrada' => 'nullable|date_format:H:i',
+            'hora_salida' => 'nullable|date_format:H:i',
+            'acceso' => 'required|string|max:50',
+            'area_asignada' => 'nullable|string|max:100',
+            'estado' => 'required|in:Activo,Inactivo',
             'email' => 'required|email|max:100',
             'telefono' => 'required|string|max:15',
             'id_hotel' => 'required|exists:hoteles,id',
-            'id_rol' => 'required|exists:roles,id_rol',
-            // otros campos y sus reglas de validación
+            'id_rol' => 'required|exists:roles,id',
         ]);
 
         $personal = Personal::findOrFail($id);
-        $personal->update($request->all());
+        $personal->nombre = $request->nombre;
+$personal->puesto = $request->puesto;
+$personal->turno = $request->turno;
+$personal->fecha_ingreso = $request->fecha_ingreso;
+$personal->tarea_asignada = $request->tarea_asignada;
+$personal->hora_entrada = $request->hora_entrada;
+$personal->hora_salida = $request->hora_salida;
+$personal->acceso = $request->acceso;
+$personal->area_asignada = $request->area_asignada;
+$personal->estado = $request->estado;
+$personal->email = $request->email;
+$personal->telefono = $request->telefono;
+$personal->id_hotel = $request->id_hotel;
+$personal->id_rol = $request->id_rol;
+$personal->save();
+
         return redirect()->route('personal.index')->with('success', 'Personal actualizado exitosamente');
     }
 
-    // Método para eliminar un registro
     public function destroy($id)
     {
         $personal = Personal::findOrFail($id);
@@ -74,4 +117,3 @@ class PersonalController extends Controller
         return redirect()->route('personal.index')->with('success', 'Personal eliminado exitosamente');
     }
 }
-
