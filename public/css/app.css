@@ -1,152 +1,152 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #263346; 
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-y: auto;
+  background: #263346; 
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 .header {
-    width: 100%;
-    height: 70px;
-    background: #131F30;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
+  width: 100%;
+  height: 70px;
+  background: #131F30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo-image {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
 }
 
 .menu-items {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .menu-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .menu-item:hover {
-    transform: scale(1.1);
-    background-color: #2e3b4e; 
+  transform: scale(1.1);
+  background-color: #2e3b4e; 
 }
 
 .menu-item img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
 }
 
 .menu-item span {
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
 }
 
 .profile-icons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .profile-icons img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .content {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin-top: 90px;
-    padding-left: 15px; 
-    padding-right: 80px;
-    gap: 30px; /* espacio entre los 2 divs */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 90px;
+  padding-left: 15px; 
+  padding-right: 80px;
+  gap: 30px; /* espacio entre los 2 divs */
 }
 
 .content a {
-   text-decoration: none;
+ text-decoration: none;
 }
 
 .sidebar {
-    text-decoration: none;  
-    height: 100%; /*El largo depende de los hijos*/
-    width: 250px;
-    background-color: #131F30;
-    border-radius: 20px; 
-    margin-bottom: 20px; 
-    color: white;
+  text-decoration: none;  
+  height: 100%; /*El largo depende de los hijos*/
+  width: 250px;
+  background-color: #131F30;
+  border-radius: 20px; 
+  margin-bottom: 20px; 
+  color: white;
 }
 
 .sidebar .sidebar-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 28px;
-    height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  height: 60px;
 }
 
 .sidebar .sidebar-content a {
-    color: white;
+  color: white;
 }
 
 .sidebar .sidebar-content a:visited {
-    color: white;
+  color: white;
 }
 
 .sidebar .sidebar-content:first-of-type {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .sidebar .sidebar-content:last-of-type {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; 
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; 
 }
 
 
 .sidebar .sidebar-content:hover {
-    background-color:#2e3b4e;
-    font-size: 36px;
+  background-color:#2e3b4e;
+  font-size: 36px;
 }
 
 .main {
-    flex: auto; /*Hace que la caja cubra todo el with */
-    /*background-color: rgb(32, 32, 32);*/
-    height: 100%; /*El largo depende de los hijos*/
-    border-radius: 10px;
+  flex: auto; /*Hace que la caja cubra todo el with */
+  /*background-color: rgb(32, 32, 32);*/
+  height: 100%; /*El largo depende de los hijos*/
+  border-radius: 10px;
 }
 
 .main .main-content {
-    padding-left: 30px;
-    color: white;
+  padding-left: 30px;
+  color: white;
 }
