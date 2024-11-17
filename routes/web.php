@@ -7,6 +7,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\PromocionesController;
 
 Route::middleware(['web'])->group(function () {
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
@@ -14,6 +15,14 @@ Route::middleware(['web'])->group(function () {
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });
 
+Route::prefix('promociones')->name('promociones.')->group(function () {
+    Route::get('/', [PromocionesController::class, 'index'])->name('index'); 
+    Route::get('/create', [PromocionesController::class, 'create'])->name('create'); 
+    Route::post('/', [PromocionesController::class, 'store'])->name('store'); 
+    Route::get('/{promocion}/edit', [PromocionesController::class, 'edit'])->name('edit'); 
+    Route::put('/{promocion}', [PromocionesController::class, 'update'])->name('update'); 
+    Route::delete('/{promocion}', [PromocionesController::class, 'destroy'])->name('destroy'); 
+});
 
 Route::prefix('personal')->name('personal.')->group(function () {
     Route::get('/', [PersonalController::class, 'index'])->name('index'); 

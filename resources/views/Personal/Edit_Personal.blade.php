@@ -12,7 +12,7 @@
     <form action="{{ route('personal.update', $personal->id_personal) }}" method="POST" class="edit-form">
         @csrf
         @method('PUT')
-        
+
         <div class="input-group">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" value="{{ $personal->nombre }}" required>
