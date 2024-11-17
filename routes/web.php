@@ -7,7 +7,6 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PersonalController;
-
 Route::middleware(['web'])->group(function () {
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('login', [LoginController::class, 'login']);
@@ -51,8 +50,8 @@ Route::get('/ocupacion', [OcupacionController::class, 'index']);
 
 
 
-Route::get('/estadisticas', function () {
-    return view('Modulo_Reservaciones.Estadisticas');
+Route::get('/vista_clientes', function () {
+    return view('Vistas_Cliente.Vista_Principal');
 });
 
 Route::get('/mapeo', function () {
@@ -78,3 +77,11 @@ Route::get('/stock', function () {
 Route::get('/login', function () {
     return view('Login');
 });
+
+// Ruta raíz para la página principal
+Route::get('/', function () {
+    return view('Vista_Principal', [
+        'title' => 'Welcome to Hotel',
+        'description' => 'Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum.',
+    ]);
+})->name('Vista_Principal');
