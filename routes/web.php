@@ -79,9 +79,17 @@ Route::get('/login', function () {
 });
 
 // Ruta raíz para la página principal
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('Vista_Principal', [
         'title' => 'Welcome to Hotel',
         'description' => 'Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum.',
     ]);
-})->name('Vista_Principal');
+})->name('Vista_Principal');*/
+
+Route::get('/Vistas_Cliente', function () {
+    return view('Vistas_Cliente.Vista_Principal');
+});
+
+Route::get('/Vistas_Cliente', function () {
+    return view('Vistas_Cliente.vista_hoteles');
+});
