@@ -86,10 +86,10 @@ Route::get('/login', function () {
     ]);
 })->name('Vista_Principal');*/
 
-Route::get('/Vistas_Cliente', function () {
+Route::get('/Principal', function () {
     return view('Vistas_Cliente.Vista_Principal');
 });
 
-Route::get('/Vistas_Cliente', function () {
+Route::get('/hoteles', function () {
     return view('Vistas_Cliente.vista_hoteles');
 });
