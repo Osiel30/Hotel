@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Hoteles extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
     protected $table = 'sistemahotel.hoteles'; 
     protected $fillable = ['id','nombre', 'direccion', 'telefono', 'ciudad', 'estado']; 
 
@@ -20,5 +21,11 @@ class Hoteles extends Model
      public function inventarios()
      {
          return $this->hasMany(Inventario::class, 'hotel_id','id');
-     }
+ 
+        }
+
+        public function personal()
+    {
+        return $this->hasMany(Personal::class, 'id_hotel');
+    }
 }
