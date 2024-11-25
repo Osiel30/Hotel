@@ -7,8 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Rol extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
     protected $primaryKey = 'id';
     protected $table = 'sistemahotel.roles';
+=======
+    protected $table = 'roles';
+>>>>>>> origin/Erick
     protected $fillable = ['nombre', 'descripcion'];
 
     public function personal()

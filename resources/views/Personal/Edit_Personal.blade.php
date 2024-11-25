@@ -44,12 +44,11 @@
 
         <div class="input-group">
             <label for="hora_entrada">Hora de Entrada</label>
-            <input type="time" id="hora_entrada" name="hora_entrada" value="{{ $personal->hora_entrada }}" required>
-        </div>
+            <input type="time" id="hora_entrada" name="hora_entrada" value="{{ $personal->hora_entrada ? date('H:i', strtotime($personal->hora_entrada)) : '' }}" required> </div>
 
         <div class="input-group">
             <label for="hora_salida">Hora de Salida</label>
-            <input type="time" id="hora_salida" name="hora_salida" value="{{ $personal->hora_salida }}" required>
+            <input type="time" id="hora_salida" name="hora_salida" value="{{ $personal->hora_salida ? date('H:i',strtotime($personal->hora_salida)) :''}}" required> {{--modificacion--}}
         </div>
 
         <div class="input-group">

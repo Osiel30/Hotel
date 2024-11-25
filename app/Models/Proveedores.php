@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Proveedores extends Model
 {
     use HasFactory;
-    protected $table = 'sistemahotel.proveedores';
+    protected $table = 'proveedores';
     protected $fillable = [
         'nombre',
         'direccion',

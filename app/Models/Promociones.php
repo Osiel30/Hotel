@@ -9,7 +9,11 @@ class Promociones extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $table = 'sistemahotel.promociones';
+=======
+    protected $table = 'promociones';
+>>>>>>> origin/Erick
 
     protected $fillable = [
         'nombre',

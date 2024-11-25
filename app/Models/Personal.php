@@ -9,7 +9,7 @@ class Personal extends Model
 {
     use HasFactory;
 
-    protected $table = 'sistemahotel.personal';
+    protected $table = 'personal';
     protected $primaryKey = 'id_personal';
     protected $fillable = [
         'nombre', 'puesto', 'turno', 'fecha_ingreso', 'tarea_asignada',

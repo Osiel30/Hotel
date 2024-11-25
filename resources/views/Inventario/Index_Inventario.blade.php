@@ -54,9 +54,16 @@
         </section>
     </main>
 </div>
+
+<form action="{{route('pdf')}}" method="GET">
+    {{-- @csrf --}}
+    <button class="delete-button" type="submit">Generar reporte</button>
+</form>
 @endsection
 
 @section('sidebar.content')
     <div class="sidebar-content">Stock</div>
     <div class="sidebar-content">Ordenes</div>
 @endsection
+
+

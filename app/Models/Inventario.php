@@ -9,7 +9,7 @@ class Inventario extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_producto'; 
-    protected $table = 'sistemahotel.inventario';
+    protected $table = 'inventario';
     protected $fillable = [
         'hotel_id',
         'proveedor_id',
