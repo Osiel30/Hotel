@@ -40,7 +40,6 @@
     </form>
     
     <script>
-        // Habilitar/deshabilitar select dependiendo del checkbox
         document.getElementById('filter_hotel').addEventListener('change', function () {
             document.getElementById('hotel_id').disabled = !this.checked;
         });

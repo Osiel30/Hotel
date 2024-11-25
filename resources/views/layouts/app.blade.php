@@ -38,8 +38,10 @@
                 <span>Facturas</span>
             </div>
             <div class="menu-item">
-                <img src="{{ asset('img/marketing.svg') }}" alt="Marketing" class="marketing-image">
-                <span>Marketing</span>
+                <a href="{{route('promociones.index')}}">
+                    <img src="{{ asset('img/marketing.svg') }}" alt="Marketing" class="marketing-image">
+                    <span>Marketing</span>
+                </a>
             </div>
             <div class="menu-item">
                 <a href="{{route('inventario.index')}}">
