@@ -2,7 +2,7 @@
 
 @section('head.content')
     <title>Realizar reporte del inventario</title>
-    <link rel="stylesheet" href="{{ asset('/css/edit_form.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/reporte.css') }}">
 @endsection
 
 
@@ -13,7 +13,6 @@
     <form action="{{ route('generar') }}" method="GET" class="edit-form">
         @csrf
         <div class="input-group">
-            <input type="checkbox" id="filter_hotel" name="filter_hotel">
             <label for="hotel_id">Filtrar por Hotel</label>
             <select id="hotel_id" name="hotel_id" disabled>
                 <option value="">Todos</option>
@@ -23,10 +22,11 @@
                     </option>
                 @endforeach
             </select>
+            <input type="checkbox" id="filter_hotel" name="filter_hotel">
+
         </div>
     
         <div class="input-group">
-            <input type="checkbox" id="filter_proveedor" name="filter_proveedor">
             <label for="proveedor_id">Filtrar por Proveedor</label>
             <select id="proveedor_id" name="proveedor_id" disabled>
                 <option value="">Todos</option>
@@ -36,9 +36,11 @@
                     </option>
                 @endforeach
             </select>
+            <input type="checkbox" id="filter_proveedor" name="filter_proveedor">
+
         </div>
     
-        <button type="submit">Generar PDF</button>
+        <button type="submit" class="cancel-button">Generar PDF</button>
     </form>
     
     <script>
@@ -52,4 +54,9 @@
         });
     </script>
 </main>
+@endsection
+
+@section('sidebar.content')
+    <div class="sidebar-content">Stock</div>
+    <div class="sidebar-content">Ordenes</div>
 @endsection

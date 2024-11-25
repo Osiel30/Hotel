@@ -8,12 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Hoteles extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
-    protected $primaryKey = 'id';
-    protected $table = 'sistemahotel.hoteles'; 
-=======
     protected $table = 'hoteles'; 
->>>>>>> origin/Erick
     protected $fillable = ['id','nombre', 'direccion', 'telefono', 'ciudad', 'estado']; 
 
     
