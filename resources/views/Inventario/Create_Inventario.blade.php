@@ -2,7 +2,7 @@
 
 @section('head.content')
     <title>Editar Cliente</title>
-    <link rel="stylesheet" href="{{ asset('/css/Modulo_Inventario/Create_Inventario.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/anadir.css') }}">
 @endsection
  
 
@@ -46,7 +46,10 @@
                 <input type="text" id="descripcion" name="descripcion" required>
             </div>
 
-            <button type="submit" class="cancel-button">Registrar Producto</button>
+            <div class="button-group">
+                <a href="{{ route('inventario.index') }}" class="cancel-button">Cancelar</a>
+                <button type="submit" class="cancel-button">Registrar</button>
+            </div>
         </form>
     </div>
 @endsection

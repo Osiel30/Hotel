@@ -50,8 +50,8 @@
         </div>
 
         <div class="button-group">
-            <button type="submit" class="cancel-button">Guardar Cambios</button>
             <a href="{{ route('inventario.index') }}" class="cancel-button">Cancelar</a>
+            <button type="submit" class="cancel-button">Guardar Cambios</button>
         </div>
     </form>
 </main>

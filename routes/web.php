@@ -15,7 +15,7 @@ Route::middleware(['web'])->group(function () {
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });
 
-Route::prefix('promociones')->name('promociones.')->group(function () {
+Route::prefix('promociones')->name('promociones.')->middleware('setCurrentSection:marketing')->group(function () {
     Route::get('/', [PromocionesController::class, 'index'])->name('index'); 
     Route::get('/create', [PromocionesController::class, 'create'])->name('create'); 
     Route::post('/', [PromocionesController::class, 'store'])->name('store'); 
@@ -24,7 +24,7 @@ Route::prefix('promociones')->name('promociones.')->group(function () {
     Route::delete('/{promocion}', [PromocionesController::class, 'destroy'])->name('destroy'); 
 });
 
-Route::prefix('personal')->name('personal.')->group(function () {
+Route::prefix('personal')->name('personal.')->middleware('setCurrentSection:personal')->group(function () {
     Route::get('/', [PersonalController::class, 'index'])->name('index'); 
     Route::get('create', [PersonalController::class, 'create'])->name('create'); 
     Route::post('/', [PersonalController::class, 'store'])->name('store'); 
@@ -34,55 +34,43 @@ Route::prefix('personal')->name('personal.')->group(function () {
     Route::delete('{personal}', [PersonalController::class, 'destroy'])->name('destroy'); 
 });
 
-
-Route::prefix('inventario')->name('inventario.')->group(function () {
-    Route::get('/', [InventarioController::class, 'index'])->name('index');//Muestra
-    Route::get('create', [InventarioController::class, 'create'])->name('create');//Muestra el formulario de creacion
-    Route::post('/', [InventarioController::class, 'store'])->name('store');//Almacena el producto
-    Route::get('{inventario}', [InventarioController::class, 'show'])->name('show');//Muestra el producto por id
-    Route::get('{inventario}/edit', [InventarioController::class, 'edit'])->name('edit');//Muestra el formulario con la informacion para editar
-    Route::put('{inventario}', [InventarioController::class, 'update'])->name('update');//Actualiza un registro de producto
-    Route::delete('{inventario}', [InventarioController::class, 'destroy'])->name('destroy');//Elimina un producto
+Route::prefix('inventario')->name('inventario.')->middleware('setCurrentSection:inventario')->group(function () {
+    Route::get('/', [InventarioController::class, 'index'])->name('index');
+    Route::get('create', [InventarioController::class, 'create'])->name('create');
+    Route::post('/', [InventarioController::class, 'store'])->name('store');
+    Route::get('{inventario}', [InventarioController::class, 'show'])->name('show');
+    Route::get('{inventario}/edit', [InventarioController::class, 'edit'])->name('edit');
+    Route::put('{inventario}', [InventarioController::class, 'update'])->name('update');
+    Route::delete('{inventario}', [InventarioController::class, 'destroy'])->name('destroy');
 });
 
-
-Route::group(['prefix' => 'clientes'], function () {
-    Route::get('/', [ClienteController::class, 'index'])->name('clientes.index');  
-    Route::get('/crear', [ClienteController::class, 'create'])->name('clientes.create');  
-    Route::post('/', [ClienteController::class, 'store'])->name('clientes.store'); 
-    Route::get('/{cliente}', [ClienteController::class, 'show'])->name('clientes.show');  
-    Route::get('/{cliente}/editar', [ClienteController::class, 'edit'])->name('clientes.edit');  
-    Route::put('/{cliente}', [ClienteController::class, 'update'])->name('clientes.update');  
-    Route::delete('/{cliente}', [ClienteController::class, 'destroy'])->name('clientes.destroy');  
+Route::prefix('clientes')->name('clientes.')->middleware('setCurrentSection:clientes')->group(function () {
+    Route::get('/', [ClienteController::class, 'index'])->name('index');  
+    Route::get('/crear', [ClienteController::class, 'create'])->name('create');  
+    Route::post('/', [ClienteController::class, 'store'])->name('store'); 
+    Route::get('/{cliente}', [ClienteController::class, 'show'])->name('show');  
+    Route::get('/{cliente}/editar', [ClienteController::class, 'edit'])->name('edit');  
+    Route::put('/{cliente}', [ClienteController::class, 'update'])->name('update');  
+    Route::delete('/{cliente}', [ClienteController::class, 'destroy'])->name('destroy');  
 });
 
 Route::get('/ocupacion', [OcupacionController::class, 'index']);
 
-
-
 Route::get('/estadisticas', function () {
     return view('Modulo_Reservaciones.Estadisticas');
-});
+})->middleware('setCurrentSection:reservaciones');
 
 Route::get('/mapeo', function () {
     return view('Modulo_Reservaciones.Mapeo');
-});
+})->middleware('setCurrentSection:reservaciones');
 
 Route::get('/facturacion', function () {
     return view('Modulo_Facturas.Dashboard');
-})->name('facturacion');
+})->name('facturacion')->middleware('setCurrentSection:facturacion');
 
 Route::get('/listar', function () {
     return view('Modulo_Facturas.Listar');
-})->name('listar');
-
-Route::get('/ordStock', function () {
-    return view('Modulo_Reservaciones.ordenesStock');
-});
-
-Route::get('/stock', function () {
-    return view('Modulo_Reservaciones.stock');
-});
+})->name('listar')->middleware('setCurrentSection:facturacion');
 
 Route::get('/login', function () {
     return view('Login');

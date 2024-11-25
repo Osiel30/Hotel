@@ -31,8 +31,9 @@
     width: 08%;
 }
 
-.input-group input {
-    width: 60%;
+.input-group input,
+.input-group select {
+    width: 98%;
     padding: 8px; 
     border: 2px solid slateblue;
     border-radius: 5px;
@@ -42,7 +43,8 @@
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group select:focus {
     border-color: rgb(98, 0, 255);
     outline: none;
     box-shadow: 0 0 8px rgba(39, 1, 143, 0.4);

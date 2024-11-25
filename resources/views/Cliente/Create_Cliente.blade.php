@@ -2,7 +2,7 @@
 
 @section('head.content')
     <title>Crear Cliente</title>
-    <link rel="stylesheet" href="{{ asset('/css/Cliente/Create_Cliente.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/anadir.css') }}">
 @endsection
 
 @section('main.content')
@@ -40,7 +40,12 @@
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <button type="submit" class="manage-button">Registrar</button>
+
+            <div class="button-group">
+                <a href="{{ route('clientes.index') }}" class="cancel-button">Cancelar</a>
+                <button type="submit" class="cancel-button">Registrar</button>
+            </div>
+
         </form>
     </div>
 @endsection

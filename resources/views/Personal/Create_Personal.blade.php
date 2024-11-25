@@ -2,7 +2,7 @@
 
 @section('head.content')
     <title>Registrar Personal</title>
-    <link rel="stylesheet" href="{{ asset('/css/Personal/Create_Personal.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/anadir.css') }}">
 @endsection
 
 @section('main.content')
@@ -95,7 +95,10 @@
                 </select>
             </div>
 
-            <button type="submit" class="manage-button">Registrar</button>
+            <div class="button-group">
+                <a href="{{ route('personal.index') }}" class="cancel-button">Cancelar</a>
+                <button type="submit" class="cancel-button">Registrar</button>
+            </div>
         </form>
     </div>
 @endsection
