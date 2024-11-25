@@ -6,6 +6,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\PromocionesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,15 @@ Route::middleware(['auth'])->group(function () {
         Route::get('{personal}/edit', [PersonalController::class, 'edit'])->name('edit'); 
         Route::put('{personal}', [PersonalController::class, 'update'])->name('update'); 
         Route::delete('{personal}', [PersonalController::class, 'destroy'])->name('destroy'); 
+    });
+
+    Route::prefix('promociones')->name('promociones.')->group(function () {
+        Route::get('/', [PromocionesController::class, 'index'])->name('index'); 
+        Route::get('/create', [PromocionesController::class, 'create'])->name('create'); 
+        Route::post('/', [PromocionesController::class, 'store'])->name('store'); 
+        Route::get('/{promocion}/edit', [PromocionesController::class, 'edit'])->name('edit'); 
+        Route::put('/{promocion}', [PromocionesController::class, 'update'])->name('update'); 
+        Route::delete('/{promocion}', [PromocionesController::class, 'destroy'])->name('destroy'); 
     });
     
     
