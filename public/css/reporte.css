@@ -29,16 +29,19 @@
     height: 25px; 
 }
 
+.input-group input[type="checkbox"]:checked {
+    accent-color: rgb(98, 0, 255);
+}
+
 .input-group label {
     font-weight: bold;
     color: aliceblue;
-    margin-right: 10px; /* Space between label and select */
+    margin-right: 10px; 
 }
 
 .input-group select {
-    width: auto; /* Allow the select to size based on content */
-
-    flex-grow: 1; /* Allow select to grow and fill the remaining space */
+    width: auto; 
+    flex-grow: 1; 
     padding: 8px; 
     border: 2px solid slateblue;
     border-radius: 5px;

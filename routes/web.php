@@ -91,4 +91,7 @@ Route::get('/login', function () {
 
 Route::get('/reporte', [InventarioController::class, 'filtroPdf'])->name('pdf')->middleware('setCurrentSection:inventario');
 Route::get('/reporte/generar', [InventarioController::class, 'generarPdf'])->name('generar')->middleware('setCurrentSection:inventario');
+
+Route::get('/reportePersonal', [PersonalController::class, 'filtrar'])->name('pedro')->middleware('setCurrentSection:personal');
+Route::get('/reportePersonal/generar', [PersonalController::class, 'generate'])->name('jesus')->middleware('setCurrentSection:personal');
 });
