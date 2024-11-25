@@ -96,6 +96,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/stock', function () {
         return view('Modulo_Reservaciones.stock');
     });
+
+    Route::get('/reporte', [InventarioController::class, 'filtroPdf'])->name('pdf');
+    Route::get('/reporte/generar', [InventarioController::class, 'generarPdf'])->name('generar');
 });
 
 require __DIR__.'/auth.php';

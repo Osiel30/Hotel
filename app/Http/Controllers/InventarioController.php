@@ -15,13 +15,12 @@ class InventarioController extends Controller
 }
 
 
-public function create()
-{
-   
-    $hoteles = Hoteles::all(); 
-    $proveedores = Proveedores::all(); 
-    return view('Inventario.Create_Inventario', compact('hoteles', 'proveedores'));
-}
+    public function create()
+    {
+        $hoteles = Hoteles::all(); 
+        $proveedores = Proveedores::all(); 
+        return view('Inventario.Create_Inventario', compact('hoteles', 'proveedores'));
+    }
 
 
     public function store(Request $request)
@@ -71,4 +70,41 @@ public function create()
         $inventario->delete();
         return redirect()->route('inventario.index')->with('success', 'Producto eliminado correctamente');
     }
+
+    public function filtroPdf(){
+        $inventario = Inventario::all();
+        $hoteles = Hoteles::all();
+        $proveedores = Proveedores::all();            
+        return view('Inventario.Filtro_Pdf_Inventario',compact('inventario','hoteles','proveedores'));
+    }
+
+    public function generarPdf(Request $request)
+{
+    $filterHotel = $request->has('filter_hotel');
+    $filterProveedor = $request->has('filter_proveedor');
+    $hotelId = $request->input('hotel_id');
+    $proveedorId = $request->input('proveedor_id');
+
+    $query = Inventario::query();
+
+    if ($filterHotel && !empty($hotelId)) {
+        $query->where('hotel_id', $hotelId);
+    }
+
+    if ($filterProveedor && !empty($proveedorId)) {
+        $query->where('proveedor_id', $proveedorId);
+    }
+
+    // Obtener resultados
+    $inventarios = $query->with(['hotel', 'proveedor'])->get();
+
+    $data = [
+        'titulo' => 'Styde.net'
+    ];
+
+    $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('Inventario_pdf', compact('inventarios'));
+
+    return $pdf->download('reporte.pdf');
+}
+
 }
