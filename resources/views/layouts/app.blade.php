@@ -52,7 +52,12 @@
         </div>
         <div class="profile-icons">
             <img src="{{ asset('img/bell2.png') }}" alt="Notificaciones" class="notificaciones-image">
-            <img src="{{ asset('img/userIcon.png') }}" alt="User" class="user-image">
+            <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                @csrf
+                <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+                    <img src="{{ asset('img/userIcon.png') }}" alt="User" class="user-image">
+                </button>
+            </form>
         </div>
     </header>
 

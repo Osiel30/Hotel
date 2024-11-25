@@ -13,11 +13,11 @@
                 <input type="search" placeholder="Buscar...">
             </div>
             <div class="top-bar">
-                <a href="{{ route('personal.create') }}" class="edit-button">+ Añadir Personal</a>
+                <a href="{{ route('personal.create') }}" class="edit-button">Añadir Personal</a>
             </div>
 
             <div class="top-bar">
-                <a href="{{ route('pedro') }}" class="edit-button">Generar Reporte</a>
+                <a href="{{ route('pedro') }}" class="delete-button">Generar Reporte</a>
             </div>
             
         </section>

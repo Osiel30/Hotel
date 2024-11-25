@@ -13,10 +13,6 @@
                 <input type="search" placeholder="Search Data...">
             </div>
 
-            <form action="{{route('pdf')}}" method="GET">
-                {{-- @csrf --}}
-                <button class="delete-button" type="submit">Generar reporte</button>
-            </form>
             <div class="top-bar">
                 <a href="{{ route('inventario.create') }}" class="edit-button">Añadir Item</a>
             </div>
