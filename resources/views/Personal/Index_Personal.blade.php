@@ -15,6 +15,11 @@
             <div class="top-bar">
                 <a href="{{ route('personal.create') }}" class="edit-button">+ Añadir Personal</a>
             </div>
+
+            <div class="top-bar">
+                <a href="{{ route('pedro') }}" class="edit-button">Generar Reporte</a>
+            </div>
+            
         </section>
         <section class="table__body">
             <table>

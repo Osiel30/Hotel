@@ -10,7 +10,7 @@
 <main class="main-content">
     <h2>Filtrar reporte</h2>
 
-    <form action="{{ route('generar') }}" method="GET" class="edit-form">
+    <form  action="{{route('jesus')}}"method="GET" class="edit-form">
         @csrf
         <div class="input-group">
             <label for="hotel_id">Filtrar por Hotel</label>
@@ -23,21 +23,17 @@
                 @endforeach
             </select>
             <input type="checkbox" id="filter_hotel" name="filter_hotel">
-
         </div>
     
         <div class="input-group">
-            <label for="proveedor_id">Filtrar por Proveedor</label>
-            <select id="proveedor_id" name="proveedor_id" disabled>
+            <label for="turno_id">Filtrar por Turno</label>
+            <select id="turno_id" name="turno_id" disabled>
                 <option value="">Todos</option>
-                @foreach ($proveedores as $proveedor)
-                    <option value="{{ $proveedor->id }}">
-                        {{ $proveedor->nombre }}
-                    </option>
-                @endforeach
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
             </select>
-            <input type="checkbox" id="filter_proveedor" name="filter_proveedor">
-
+            <input type="checkbox" id="filter_turno" name="filter_turno">
         </div>
     
         <button type="submit" class="cancel-button">Generar PDF</button>
@@ -49,8 +45,8 @@
             document.getElementById('hotel_id').disabled = !this.checked;
         });
     
-        document.getElementById('filter_proveedor').addEventListener('change', function () {
-            document.getElementById('proveedor_id').disabled = !this.checked;
+        document.getElementById('filter_turno').addEventListener('change', function () {
+            document.getElementById('turno_id').disabled = !this.checked;
         });
     </script>
 </main>

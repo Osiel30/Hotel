@@ -99,6 +99,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/reporte', [InventarioController::class, 'filtroPdf'])->name('pdf');
     Route::get('/reporte/generar', [InventarioController::class, 'generarPdf'])->name('generar');
+
+    Route::get('/reportePersonal', [PersonalController::class, 'filtrar'])->name('pedro');
+    Route::get('/reportePersonal/generar', [PersonalController::class, 'generate'])->name('jesus');
 });
 
 require __DIR__.'/auth.php';
